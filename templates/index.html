@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>House Price Prediction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #2b1055, #7597de);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(18px);
+      padding: 40px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(101, 142, 255, 0.6);
+      transition: 0.3s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 18px rgba(101, 142, 255, 0.8);
+    }
+
+    .result {
+      margin-top: 20px;
+      background: rgba(0, 255, 150, 0.1);
+      padding: 15px;
+      border-left: 5px solid #00ffa1;
+      border-radius: 10px;
+      color: #a0ffda;
+      font-weight: 600;
+      text-align: center;
+      font-size: 17px;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 12px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🏠 House Price Prediction</h2>
+    <form method="POST" action="/predict">
+      <label>Overall Quality:</label>
+      <input type="number" name="OverallQual" step="1" required>
+
+      <label>GrLivArea (sq ft):</label>
+      <input type="number" name="GrLivArea" step="0.01" required>
+
+      <label>Garage Cars:</label>
+      <input type="number" name="GarageCars" step="1" required>
+
+      <label>Total Basement Area:</label>
+      <input type="number" name="TotalBsmtSF" step="1" required>
+
+      <label>Full Bathrooms:</label>
+      <input type="number" name="FullBath" step="1" required>
+
+      <label>Year Built:</label>
+      <input type="number" name="YearBuilt" step="1" required>
+
+      <input type="submit" value="🔥 Predict House Price">
+    </form>
+
+    {% if prediction_text %}
+      <div class="result">{{ prediction_text }}</div>
+    {% endif %}
+
+    <footer>
+      Made by Sreyan Vuyyuru 🚀
+    </footer>
+  </div>
+</body>
+</html>
