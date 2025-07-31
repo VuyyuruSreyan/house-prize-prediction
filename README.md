@@ -76,7 +76,6 @@ I’m a machine learning enthusiast actively seeking **paid internship opportuni
 ## 🔗 Connect with Me
 
 - 📧 Email: vuyyurusreyan@gmail.com  
-- 💼 [LinkedIn](www.linkedin.com/in/sreyan-vuyyuru-022408334)  
 - 📂 [My GitHub Profile](https://github.com/VuyyuruSreyan)
 
 ---
