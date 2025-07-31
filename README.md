@@ -36,7 +36,7 @@ A lightweight Flask web application allows users to input house features and get
 - Python backend for model inference
 - Clean and user-friendly UI
 
-![App Screenshot](screenshot.png) <!-- Replace with actual screenshot if available -->
+![App Screenshot](screenshot.png)
 
 ## 📈 Model Performance
 
